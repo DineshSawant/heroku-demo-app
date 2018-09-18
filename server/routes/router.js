@@ -4,9 +4,9 @@ var router = express.Router();
 
 
 // GET route for reading data
-router.get('/', function (req, res, next) {
-  return res.sendFile(path.join(__dirname + '/heroku-demo-app/index.html'));
-});
+// router.get('*', function (req, res, next) {
+//   return res.sendFile(path.join(__dirname + 'dist/heroku-demo-app/index.html'));
+// });
 
 
 router.get('/api/users', (req, res) => {
