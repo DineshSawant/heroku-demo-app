@@ -16,6 +16,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class AboutusComponent implements OnInit {
 
+  text = {};
   showPanel = false;
   // @HostBinding('@routeFadeState') routeAnimation = true;
   @HostBinding('@routeSlideState') routeAnimation = true;
@@ -26,10 +27,9 @@ export class AboutusComponent implements OnInit {
   }
 
   getDetails() {
-    console.log('Click....');
     this.http.get('/api/users').subscribe(
       data => {
-        console.log(data);
+        this.text = data;
       },
       err => console.log(),
       () => console.log('Done'));
