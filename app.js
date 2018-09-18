@@ -2,18 +2,14 @@ const express = require('express');
 const http = require('http');
 const path = require('path');
 
-// const api = require('./server/routes/api');
-
 const app = express();
 
 // serve static files from template
 app.use(express.static(path.join(__dirname, 'dist/heroku-demo-app')));
 
-app.get('/api/users', (req, res) => {
-    res.send({
-        name: "Getting users..."
-    });
-});
+// include routes
+var routes = require('./server/routes/router');
+app.use('/', routes);
 
 // app.get('*', (req, res) => {
 //     res.sendFile(path.join(__dirname, 'dist/heroku-demo-app/index.html'));
