@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
+  isLoggedIn = false;
   showInlineForm = true;
   constructor(private router: Router) {
     this.router.events.subscribe(
