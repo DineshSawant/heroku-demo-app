@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">App Name</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item" *ngIf="showInlineForm">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Username" formControlName="uname">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Password" formControlName="pass">
+                    <button class="btn btn-default" type="submit">Sign in</button>
+                    <a class="nav-link" routerLink="forgot-password">Forgot password?</a>
+                </form>
+            </li>
+            <li class="nav-item" *ngIf="!showInlineForm">
+                <button class="btn btn-link mr-sm-2" routerLink="login">Sign in</button>
+            </li>
+            <li class="nav-item" *ngIf="!showInlineForm">
+                <button class="btn btn-default mr-sm-2" routerLink="sign-up">Join now</button>
+            </li>
+            <li class="nav-item" *ngIf="isLoggedIn">
+                <a class="nav-link" routerLink="home">Home</a>
+            </li>
+            <li class="nav-item" *ngIf="isLoggedIn">
+                <a class="nav-link" routerLink="aboutus">About Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
