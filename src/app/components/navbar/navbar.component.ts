@@ -13,12 +13,10 @@ export class NavbarComponent implements OnInit {
   constructor(private router: Router) {
     this.router.events.subscribe(
       (event: any) => {
-        if ((event && this.router.url === '/forgot-password') || 
-      (event && event && this.router.url === '/login') || 
-      (event && event && this.router.url === '/sign-up')) {
-          this.showInlineForm = false;
-        }else {
+        if (event && this.router.url === '/') {
           this.showInlineForm = true;
+        }else {
+          this.showInlineForm = false;
         }
       }
     );

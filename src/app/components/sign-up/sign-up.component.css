@@ -1,3 +1,12 @@
 :host {
     display: block;
 }
+
+.form-title {
+    text-align: center;
+    padding: 20px;
+}
+
+.note {
+    font-size: 12px
+}

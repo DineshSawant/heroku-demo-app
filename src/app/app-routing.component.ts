@@ -22,7 +22,7 @@ const appRoutes: Routes = [
         component: ForgotPasswordComponent
     },
     {
-        path: 'home',
+        path: '',
         component: HomeComponent
     },
     {
@@ -31,7 +31,7 @@ const appRoutes: Routes = [
     },
     {
         path: '',
-        redirectTo: '/home',
+        redirectTo: '',
         pathMatch: 'full'
     },
     {

@@ -1,3 +1,17 @@
 :host {
     display: block;
 }
+
+.nav-link {
+    padding: 0px;
+}
+
+.app-title {
+    text-align: center;
+    padding: 30px;
+}
+
+.forgot-pass {
+    padding: 15px;
+    font-size: 13px
+}
